@@ -42,8 +42,8 @@
     //Get references to the view hierarchy
     UIView *containerView = [transitionContext containerView];
     
-    CGFloat zoomingScale = (self.type == ICGScaleAnimationFadeIn) ? 0.8 : 2.0;
-    CGFloat springScale = (self.type == ICGScaleAnimationFadeIn) ? 1.2 : 2.2;
+    CGFloat zoomingScale = (self.type == ICGScaleAnimationFadeIn) ? 0.5 : 2.0;
+    CGFloat springScale = (self.type == ICGScaleAnimationFadeIn) ? 1.0 : 2.2;
     
     if (!self.reverse) {
         //Add 'to' view to the hierarchy with zooming scale
