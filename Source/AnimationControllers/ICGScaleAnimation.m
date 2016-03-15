@@ -51,9 +51,11 @@
         [containerView insertSubview:toView aboveSubview:fromView];
         
         //Scale the 'to' view to to its final position
+        toView.alpha = 0;
         [UIView animateKeyframesWithDuration:duration delay:0.0 options:0 animations:^{
             [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1.0 animations:^{
                 toView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                toView.alpha = 1.0;
             }];
         }completion:^(BOOL finished){
             [transitionContext completeTransition:YES];
