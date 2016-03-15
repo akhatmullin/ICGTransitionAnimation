@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self){
-        self.animationDuration = 0.3; // make animation faster than default
+        self.animationDuration = 0.33; // make animation faster than default
     }
     
     return self;
@@ -27,7 +27,7 @@
     self = [super init];
     if (self){
         self.type = type;
-        self.animationDuration = 0.3; // make animation faster than default
+        self.animationDuration = 0.33; // make animation faster than default
     }
     return self;
 }
@@ -52,10 +52,7 @@
         
         //Scale the 'to' view to to its final position
         [UIView animateKeyframesWithDuration:duration delay:0.0 options:0 animations:^{
-            [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.3 animations:^{
-                toView.transform = CGAffineTransformMakeScale(springScale, springScale);
-            }];
-            [UIView addKeyframeWithRelativeStartTime:0.3 relativeDuration:0.7 animations:^{
+            [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1.0 animations:^{
                 toView.transform = CGAffineTransformMakeScale(1.0, 1.0);
             }];
         }completion:^(BOOL finished){
